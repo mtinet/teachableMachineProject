@@ -27,11 +27,6 @@ pip install pillow
 pip install pyserial
 ```
 - cv2 설치
-```{.python} 
-pip install opencv-python
-```
-- 그 외 오류는 오류나는 부분을 카피해서 구글에 물어보면 해답을 얻을 수 있음  
-
 OpenCV의 main module만 사용한다면 아래처럼 설치
 ```{.python} 
 pip install opencv-python
@@ -40,7 +35,9 @@ pip install opencv-python
 ```{.python} 
 pip install opencv-contrib-python  
 ```
-
+- 그 외 오류는 오류나는 부분을 카피해서 구글에 물어보면 해답을 얻을 수 있음  
+ 
+ 
 #### 4. 파일 구동은 아래 명령어로 하면 됨, 프로그램 정지는 'q'버튼  
 ```{.python}  
 $python video.py  
