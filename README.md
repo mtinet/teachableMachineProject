@@ -7,6 +7,7 @@
 #### 0. 관련 링크  
 - [관련 영상](https://photos.app.goo.gl/G8MU8mmxGLo6pj2D9)  
 - [Teachable Machine](https://teachablemachine.withgoogle.com/)  
+![](https://github.com/mtinet/teachableMachineProject/blob/master/image/example.png?raw=true)  
 
 #### 1. 개요  
 - 로컬에서 웹캠 영상을 가져와서 학습된 모델에 있는 레이블의 정규화된 비율로 데이터를 출력함  
