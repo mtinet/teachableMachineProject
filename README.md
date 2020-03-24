@@ -4,6 +4,10 @@
 
 ### 파이썬에 tensorflow, PIL(pillow), numpy, cv2, serial 라이브러리를 설치해 사용함  
 
+#### 0. 관련 링크  
+- [관련 영상](https://photos.app.goo.gl/G8MU8mmxGLo6pj2D9)  
+- [Teachable Machine](https://teachablemachine.withgoogle.com/)  
+
 #### 1. 개요  
 - 로컬에서 웹캠 영상을 가져와서 학습된 모델에 있는 레이블의 정규화된 비율로 데이터를 출력함  
 - 정규화된 특정 결과값의 비중에 따라 시리얼 통신으로 utf-8의 형태의 'a', 'b', 'c'를 송신함  
