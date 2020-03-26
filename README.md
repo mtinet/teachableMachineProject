@@ -17,6 +17,9 @@
 
 #### 2. python 설치  
 - tensorflow는 아직 python 3.7까지만 지원을 하므로, 파이썬을 3.7버전으로 설치해야 함  
+- python.org사이트 Diwbkiad-Windows에서 Python 3.7.7 - March 10, 2020 카테고리 안에 있는 Download Windows x86-64 executable installer를 다운로드 받아 설치함  
+- python 설치할 때는 Add python 3.7 to PATH를 반드시 체크하고 설치를 진행하세요  
+![](https://miro.medium.com/max/1308/1*2b0JT1QLGfkzYIoofh9VEA.png)  
 
 #### 3. 라이브러리 설치  
 - tensorflow 설치(최근에 tensorflow가 2.0으로 버전 업그레이드가 되면서 그냥 pip install tensorflow 를 할 경우 자동으로 2.0버전이 설치되고, 우리가 사용하고 있는 파이썬에서 라이브러리 구동이 안됨. 따라서 이전 버전을 강제로 설치해야함)  
