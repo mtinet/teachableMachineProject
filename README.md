@@ -26,6 +26,8 @@
 ```{.python} 
 pip install tensorflow==1.15
 ```
+* 텐서플로우 msvcp140.dll오류시 참고 사이트 [링크](https://blog.naver.com/complusblog/221177145686), [마이크로소프트사 설치링크](https://www.microsoft.com/ko-kr/download/details.aspx?id=48145)  
+
 - PIL을 설치  
 ```{.python} 
 pip install pillow 
