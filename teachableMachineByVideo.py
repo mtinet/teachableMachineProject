@@ -24,7 +24,7 @@ ser = serial.Serial(
     # port='/dev/cu.usbmodem141201',
 
     # 아래는 윈도우에서의 시리얼 포트 설정방법임, 포트번호는 사용자의 아두이노나 마이크로비트가 연결된 포트번호로 수정해줘야 함
-    port='COM17',
+    port='COM3',
     # 통신속도는 9600bps, 이게 디폴트임.
     baudrate=9600,
 )
@@ -49,11 +49,11 @@ while(True):
 
     # frame 변수에 들어있는 비디오 프레임을 'frame'라는 이름의 창을 만들고 보여줌
     # cv2.imshow('frame',frame)
-    
+
     # 이미지 높이, 폭 추출
     h = frame.shape[0]
     w = frame.shape[1]
-    
+
     # 이미지를 teachable machine이 학습할 때 사용하는 이미지 비율로 크롭
     crop_image = frame[0:h, int((w-h)/2):int(w-((w-h)/2))]
 
@@ -63,7 +63,9 @@ while(True):
     # 바이큐빅보간법(cv2.INTER_CUBIC, 이미지를 확대할 때 주로 사용)을 이용해 frame변수에 들어온 비디오 프레임의 사이즈를 224, 224로 다운사이징하여 image 변수에 넣음
     image = cv2.resize(flip_image, dsize=(224, 224), interpolation=cv2.INTER_CUBIC)
 
-    
+    # 이미지 분석에 활용될 이미지를 화면에 보여주기
+    cv2.imshow('image',image)
+
     # asarray메소드를 이용해 image에 들어있는 크기가 변형된 이미지를 numpy가 처리할 수 있는 배열로 만들어서 image_array 변수에 넣음
     image_array = np.asarray(image)
 
