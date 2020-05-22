@@ -48,11 +48,22 @@ while(True):
     ret, frame = cap.read()
 
     # frame 변수에 들어있는 비디오 프레임을 'frame'라는 이름의 창을 만들고 보여줌
-    cv2.imshow('frame',frame)
+    # cv2.imshow('frame',frame)
+    
+    # 이미지 높이, 폭 추출
+    h = frame.shape[0]
+    w = frame.shape[1]
+    
+    # 이미지를 teachable machine이 학습할 때 사용하는 이미지 비율로 크롭
+    crop_image = frame[0:h, int((w-h)/2):int(w-((w-h)/2))]
 
-    # 바이큐빅보간법(cv2.INTER_CUBIC, 이미지를 확대할 때 주로 사용)을 이용해 frame변수에 들어온 비디오 프레임의 사이즈를 224, 224로 변경하여 image 변수에 넣음
-    image = cv2.resize(frame, dsize=(224, 224), interpolation=cv2.INTER_CUBIC)
+    # 이미지 좌우반전(1은 좌우반전, 0은 상하반전)
+    flip_image = cv2.flip(crop_image, 1)
 
+    # 바이큐빅보간법(cv2.INTER_CUBIC, 이미지를 확대할 때 주로 사용)을 이용해 frame변수에 들어온 비디오 프레임의 사이즈를 224, 224로 다운사이징하여 image 변수에 넣음
+    image = cv2.resize(flip_image, dsize=(224, 224), interpolation=cv2.INTER_CUBIC)
+
+    
     # asarray메소드를 이용해 image에 들어있는 크기가 변형된 이미지를 numpy가 처리할 수 있는 배열로 만들어서 image_array 변수에 넣음
     image_array = np.asarray(image)
 
