@@ -1,7 +1,6 @@
 import tensorflow.keras
 from PIL import Image, ImageOps
 import numpy as np
-import cv2
 
 # Disable scientific notation for clarity
 np.set_printoptions(suppress=True)
@@ -16,23 +15,18 @@ data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
 # Replace this with the path to your image
 image = Image.open('image/test_photo.jpg')
-size = (224, 224)
-image1 = ImageOps.fit(image, size, Image.ANTIALIAS)
+image.show()
 
-image = np.array(image)
-cv2.imshow('',image)
-cv2.waitKey(0)
 #resize the image to a 224x224 with the same strategy as in TM2:
 #resizing the image to be at least 224x224 and then cropping from the center
-image1 = np.array(image1)
-cv2.imshow('',image1)
-cv2.waitKey(0)
+size = (224, 224)
+image = ImageOps.fit(image, size, Image.ANTIALIAS)
 
 #turn the image into a numpy array
 image_array = np.asarray(image)
 
 # display the resized image
-#image.show()
+image.show()
 
 # Normalize the image
 normalized_image_array = (image_array.astype(np.float32) / 127.0) - 1
