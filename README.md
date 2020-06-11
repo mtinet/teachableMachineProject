@@ -53,9 +53,13 @@ pip install opencv-contrib-python
 $python teachableMachineByVideo.py  
 ```  
 
-#### 5. 그 외 파일들의 기능은 다음과 같다.  
-- keras_model.h5 : teachable machine 홈페이지에서 Export한 모델파일, 이 파일이 머신러닝 학습의 결과이며, 이 파일을 이용해 학습된 내용을 활용함, 현재는 파란색, 흰색, 초록색을 구분하는 모델파일이 올라가 있음  
-- labels.txt : 모델을 만들 때 레이블을 몇개로 해 학습을 시켰느냐에 따라 label이 나뉨  
-- teachableMachineByVideo.py : 학습된 모델 파일로 웹캠에서 입력되는 영상을 분석하여 추론해주는 파일, 이 파일이 이 프로젝트의 핵심, 추후 라즈베리파이에 탑재해서 로봇을 제어하는데 사용할 예정  
+#### 5. 결과 이미지  
+![](https://github.com/mtinet/teachableMachineProject/blob/master/image/result.png?raw=true)  
+
+
+#### 6. 그 외 파일들의 기능은 다음과 같다.  
+- keras_model.h5 : teachable machine 홈페이지에서 Export한 모델파일, 이 파일이 머신러닝 학습의 결과이며, 이 파일을 이용해 학습된 내용을 활용함, 현재는 파란색, 흰색, 초록색을 구분하는 모델파일이 올라가 있음. 티처블 머신으로 자신이 학습시키고자 하는 이미지를 학습시키면 됨  
+- labels.txt : 모델을 만들 때 레이블을 몇개로 해 학습을 시켰느냐에 따라 label이 나뉨, label 이름을 자신이 원하는 것으로 수정해 학습시키면 추후 모델로 추론을 할 때 그 label이 표시됨, 물론 나중에 다운로드 받은 labels.txt 파일을 직접 수정해도 무관함  
+- teachableMachineByVideo.py : 학습된 모델 파일로 웹캠에서 입력되는 영상을 분석하여 추론해주는 파이썬 파일, 이 파일이 이 프로젝트의 핵심, 추후 라즈베리파이에 탑재해서 로봇을 제어하는데 사용할 예정  
 - arduino/dataReceive.ino : 학습된 데이터를 기반으로 추론한 결과가 특정 퍼센티지를 넘을 때 바이트 형태의 데이터를 전송하는데, 그 때 아두이노에서 데이터가 잘 받아지는지를 확인하는 코드, 'a'가 바이트의 형태로 잘 넘어오면 13번 핀(또는 칩LED)가 점멸함, 'b'는 12번, 'c'는 11번 핀을 점멸함  
 - arduino/robot_hands.ino : 'a'가 넘어오면 바위, 'b'가 넘어오면 보자기, 'c'가 넘어오면 가위를 내는 로봇팔 제어 프로그램  
