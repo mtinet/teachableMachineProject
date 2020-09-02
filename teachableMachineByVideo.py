@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # python 홈페이지로 가서 python 3.7버전(자신의 컴퓨터 비트에 맞는 것으로..디폴트는 32비트임)을 설치함, 최신버전을 설치하면 tensorflow 라이브러리가 설치가 되지 않으니 주의할 것
 # python의 pip로 tensorflow, PIL, numpy, cv2, serial을 설치함
 # windows의 cmd 창을 열어 설치하면 되며, 순서대로 설치하는 명령어는 다음과 같음
