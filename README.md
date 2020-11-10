@@ -46,7 +46,20 @@ pip install opencv-python
 pip install opencv-contrib-python  
 ```
 - 그 외 오류는 오류나는 부분을 카피해서 구글에 물어보면 해답을 얻을 수 있음  
- 
+
+
+추가 오류  
+```
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\site-packages\tensorflow_core\python\keras\saving\hdf5_format.py", line 160, in load_model_from_hdf5
+    model_config = json.loads(model_config.decode('utf-8'))
+AttributeError: 'str' object has no attribute 'decode'
+```
+해결 방법  
+해당위치의 파일로 들어가서 아래 부분을 모두 삭제하거나,
+.decode('utf-8')
+
+아래 명령어를 실시해 자동으로 삭제해줌  
+pip3 install "h5py<3.0.0" --user
  
 #### 4. 파일 구동은 아래 명령어로 하면 됨, 프로그램 정지는 'q'버튼  
 ```{.python}  
