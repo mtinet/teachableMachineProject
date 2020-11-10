@@ -55,7 +55,7 @@ pip install opencv-contrib-python
 AttributeError: 'str' object has no attribute 'decode'
 ```
 해결 방법  
-해당위치의 파일로 들어가서 아래 부분을 모두 삭제하거나,
+해당위치의 파일로 들어가서 아래 부분을 모두 삭제하거나,  
 .decode('utf-8')
 
 아래 명령어를 실시해 자동으로 삭제해줌  
