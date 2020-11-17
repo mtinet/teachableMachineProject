@@ -54,7 +54,7 @@ pip install opencv-contrib-python
     model_config = json.loads(model_config.decode('utf-8'))
 AttributeError: 'str' object has no attribute 'decode'
 ```
-- 해당위치의 파일로 들어가서 아래 부분을 모두 삭제하거나, 
+- 해당위치의 파일로 들어가서 아래와 같이 표기된 부분을 모두 삭제하거나, 
 ```
 .decode('utf-8')
 ```
