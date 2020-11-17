@@ -48,18 +48,37 @@ pip install opencv-contrib-python
 - 그 외 오류는 오류나는 부분을 카피해서 구글에 물어보면 해답을 얻을 수 있음  
 
 
-추가 오류  
+##### 추가 오류 1  
 ```
   File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\site-packages\tensorflow_core\python\keras\saving\hdf5_format.py", line 160, in load_model_from_hdf5
     model_config = json.loads(model_config.decode('utf-8'))
 AttributeError: 'str' object has no attribute 'decode'
 ```
-해결 방법  
+- 해결 방법  
 해당위치의 파일로 들어가서 아래 부분을 모두 삭제하거나,  
 .decode('utf-8')
 
 아래 명령어를 실시해 자동으로 삭제해줌  
 pip3 install "h5py<3.0.0" --user
+
+
+##### 추가 오류 2  
+```
+Traceback (most recent call last):
+  File "teachableMachineByVideo.py", line 42, in <module>
+    model = tensorflow.keras.models.load_model('keras_model.h5', compile=False)
+......
+    raise ValueError('Unknown ' + printable_module_name + ': ' + class_name)
+ValueError: Unknown layer: Functional
+```
+- 해결 방법
+- teachable machine이 신규 업데이트 되면서 모델을 변형할 때 사용하는 keras도 버전이 업데이트 되었으나, 기존에 tensorflow==1.15에 함께 설치되는 keras 버전은 2.3.1이기 때문에 생기는 오류  
+- 아래 명령어를 통해 keras를 2.4.0으로 업데이트 해주면 잘 동작함  
+```
+python -m pip install keras==2.4.0  
+```
+
+    
  
 #### 4. 파일 구동은 아래 명령어로 하면 됨, 프로그램 정지는 'q'버튼  
 ```{.python}  
