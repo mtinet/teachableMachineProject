@@ -92,7 +92,7 @@ IndexError: index 2 is out of bounds for axis 1 with size 2
 
 - 현재 teachableMachineByVideo.py 파일은 3개의 레이블 이상이 있을 때 제대로 동작하게 짜여져 있는데, 2개의 레이블만 있는 모델 파일을 사용할 때 발생하는 오류  
 
-- 해당 파일의 128~131번째 줄을 아래와 같이 해당 행의 앞쪽에 '#'을 추가해서 주석처리 하면 됨  
+- 3번 째 레이블을 사용하게 하는 부분인 해당 파일의 128~131번째 줄을 아래와 같이 해당 행의 앞쪽에 '#'을 추가해서 주석처리하여 동작하지 않도록 해주면 됨  
 ```
     # if prediction[:, 2] > 0.7 :
     #    send = (str('c')+'\n').encode("utf-8")
