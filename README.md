@@ -54,13 +54,15 @@ pip install opencv-contrib-python
     model_config = json.loads(model_config.decode('utf-8'))
 AttributeError: 'str' object has no attribute 'decode'
 ```
-- 해결 방법  
-해당위치의 파일로 들어가서 아래 부분을 모두 삭제하거나,  
+- 해당위치의 파일로 들어가서 아래 부분을 모두 삭제하거나, 
+```
 .decode('utf-8')
+```
 
-아래 명령어를 실시해 자동으로 삭제해줌  
+- 아래 명령어를 실시해 자동으로 삭제해줌  
+```
 pip3 install "h5py<3.0.0" --user
-
+```
 
 ##### 추가 오류 2  
 ```
@@ -71,10 +73,9 @@ Traceback (most recent call last):
     raise ValueError('Unknown ' + printable_module_name + ': ' + class_name)
 ValueError: Unknown layer: Functional
 ```
-- 해결 방법  
-teachable machine이 신규 업데이트 되면서 모델을 변형할 때 사용하는 keras도 버전이 업데이트 되었으나, 기존에 tensorflow==1.15에 함께 설치되는 keras 버전은 2.3.1이기 때문에 생기는 오류  
+- teachable machine이 신규 업데이트 되면서 모델을 변형할 때 사용하는 keras도 버전이 업데이트 되었으나, 기존에 tensorflow==1.15에 함께 설치되는 keras 버전은 2.3.1이기 때문에 생기는 오류  
 
-아래 명령어를 통해 keras를 2.4.0으로 업데이트 해주면 잘 동작함  
+- 아래 명령어를 통해 keras를 2.4.0으로 업데이트 해주면 잘 동작함  
 ```
 python -m pip install keras==2.4.0  
 ```
@@ -89,10 +90,9 @@ Traceback (most recent call last):
 IndexError: index 2 is out of bounds for axis 1 with size 2
 ```
 
-- 해결방법  
-현재 teachableMachineByVideo.py 파일은 3개의 레이블 이상이 있을 때 제대로 동작하게 짜여져 있는데, 2개의 레이블만 있는 모델 파일을 사용할 때 발생하는 오류  
+- 현재 teachableMachineByVideo.py 파일은 3개의 레이블 이상이 있을 때 제대로 동작하게 짜여져 있는데, 2개의 레이블만 있는 모델 파일을 사용할 때 발생하는 오류  
 
-해당 파일의 128~131번째 줄을 아래와 같이 해당 행의 앞쪽에 '#'을 추가해서 주석처리 하면 됨  
+- 해당 파일의 128~131번째 줄을 아래와 같이 해당 행의 앞쪽에 '#'을 추가해서 주석처리 하면 됨  
 ```
     # if prediction[:, 2] > 0.7 :
     #    send = (str('c')+'\n').encode("utf-8")
