@@ -3,10 +3,6 @@
 ###### 파이썬(3.8.6까지 구동 확인)에 tensorflow(2.3.1까지 구동 확인), PIL(pillow), opencv-python, pyserial 라이브러리를 설치해 사용함  
 
 #### 0. 관련 링크  
-- 프로젝트 깃허브 레파지토리 다운로드
-```
-git clone https://github.com/mtinet/teachableMachineProject.git
-```
 - [Teachable Machine](https://teachablemachine.withgoogle.com/)  
 - [관련 영상](https://photos.app.goo.gl/G8MU8mmxGLo6pj2D9)  
 ![](https://github.com/mtinet/teachableMachineProject/blob/master/image/example.png?raw=true)  
@@ -17,7 +13,12 @@ git clone https://github.com/mtinet/teachableMachineProject.git
 - 송신된 데이터에 의해 동작하는 간단한 Arduino 파일을 첨부함  
 - 아두이노 파일(dataReceiveTest.ino)은 'a'가 들어오면 13번핀을, 'b'가 들어오면 12번핀을, 'c'가 들어오면 11번핀을 제어하도록 프로그래밍되어 있음  
 - 아두이노 파일(robot_hands_three servo.ino)은 3개의 서보모터를 사용하여 'a'가 들어오면 rock을, 'b'가 들어오면 paper를, 'c'가 들어오면 scissors를 내도록 프로그래밍되어 있음  
-- 아두이노 파일(dataReceiveTest.ino)은 2개의 서보모터를 사용하여 'a'가 들어오면 paper를, 'b'가 들어오면 scissors를, 'c'가 들어오면 rock을 내도록 프로그래밍되어 있음  
+- 아두이노 파일(dataReceiveTest.ino)은 2개의 서보모터를 사용하여 'a'가 들어오면 paper를, 'b'가 들어오면 scissors를, 'c'가 들어오면 rock을 내도록 프로그래밍되어 있음 
+- 프로젝트 깃허브 레파지토리 다운로드  
+```
+git clone https://github.com/mtinet/teachableMachineProject.git
+```
+
 #### 2. python 설치  
 - tensorflow는 아직 python 3.8.6까지만 지원을 하므로, 파이썬을 3.9버전이 설치되어 있을 경우 3.8.6 이하 버전으로 재설치해야 함  
 - python.org사이트 Download-Windows에서 Python 3.8.6 - Sept. 24, 2020 카테고리 안에 있는 Download Windows x86-64 executable installer를 다운로드 받아 설치함, [링크](https://www.python.org/downloads/windows/)  
