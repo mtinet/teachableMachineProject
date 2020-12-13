@@ -1,6 +1,6 @@
 # teachableMachineProject
 
-## 파이썬(3.8.6까지 구동 확인)에 tensorflow(2.3.1까지 구동 확인), PIL(pillow), opencv-python, pyserial 라이브러리를 설치해 사용함  
+###### 파이썬(3.8.6까지 구동 확인)에 tensorflow(2.3.1까지 구동 확인), PIL(pillow), opencv-python, pyserial 라이브러리를 설치해 사용함  
 
 #### 0. 관련 링크  
 - 프로젝트 깃허브 레파지토리 다운로드
