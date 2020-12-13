@@ -26,6 +26,18 @@
 ```{.python} 
 pip install tensorflow==1.15
 ```
+
+##### 추가 오류 1  
+```
+Fatal error in launcher: Unable to create process using '"c:\python39\python.exe"  "C:\Python39\Scripts\pip.exe" install tensorflow': ??? ??? ?? ? ????.
+```
+- tensorflow를 설치할 때 Fatal 오류가 나는 경우는 자동으로 구동되는 환경변수의 path 설정에 오류가 있기 때문이다. pip를 다시 설치하는 아래 조치를 통해 해결할 수 있다. 
+```
+python -m pip uninstall pip
+easy_install.exe pip
+```
+
+
 텐서플로우 msvcp140.dll오류시 참고 사이트 [링크](https://blog.naver.com/complusblog/221177145686), [마이크로소프트사 설치링크](https://www.microsoft.com/ko-kr/download/details.aspx?id=48145)  
 
 - PIL을 설치  
@@ -48,7 +60,7 @@ pip install opencv-contrib-python
 - 그 외 오류는 오류나는 부분을 카피해서 구글에 물어보면 해답을 얻을 수 있음  
 
 
-##### 추가 오류 1  
+##### 추가 오류 2  
 ```
   File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\site-packages\tensorflow_core\python\keras\saving\hdf5_format.py", line 160, in load_model_from_hdf5
     model_config = json.loads(model_config.decode('utf-8'))
@@ -64,7 +76,7 @@ AttributeError: 'str' object has no attribute 'decode'
 pip3 install "h5py<3.0.0" --user
 ```
 
-##### 추가 오류 2  
+##### 추가 오류 3  
 ```
 Traceback (most recent call last):
   File "teachableMachineByVideo.py", line 42, in <module>
@@ -80,7 +92,7 @@ ValueError: Unknown layer: Functional
 python -m pip install keras==2.4.0  
 ```
 
-##### 추가 오류 3  
+##### 추가 오류 4  
 ```
 0 Class 1 : 0.715531
 b'a\n'
