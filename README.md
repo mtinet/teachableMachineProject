@@ -77,7 +77,7 @@ $python teachableMachineByVideo.py
 
 #### 7. 결과 이미지  
 - teachable machine에서 class를 입력하지 않을경우 자동 생성된 class이름으로 나옴  
-![](https://github.com/mtinet/teachableMachineProject/blob/master/image/scissors.png?raw=true)  
+![](https://github.com/mtinet/teachableMachineProject/blob/master/image/test.png?raw=true)  
 
 - 가위바위보가 잘 학습되었을 경우 아래와 같은 화면이 나오면서 serial통신을 통해 a, b, c의 문자를 송신하게 됨  
 ![](https://github.com/mtinet/teachableMachineProject/blob/master/image/scissors.png?raw=true)  
