@@ -1,3 +1,5 @@
+// 아두이노 우노 보드의 하드웨어 시리얼 포트(0, 1)를 사용합니다. 
+
 const int red = 13;
 const int blue = 12;
 const int green = 11;
