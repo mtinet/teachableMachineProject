@@ -26,7 +26,9 @@ git clone https://github.com/mtinet/teachableMachineProject.git
 
 #### 3. cmd창을 열고 프로젝트 폴더로 이동  
 - 다운로드 한 폴더를 열고 주소를 복사함
+<center>
 ![](https://github.com/mtinet/teachableMachineProject/blob/master/image/location1.png?raw=true)  
+</center> 
 - 윈도우의 돋보기에서 cmd 를 실행함  
 ![](https://github.com/mtinet/teachableMachineProject/blob/master/image/cmd.png?raw=true)  
 - 아래 명령어를 통해 프로젝트 폴더로 이동
