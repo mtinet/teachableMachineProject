@@ -33,10 +33,13 @@ Fatal error in launcher: Unable to create process using '"c:\python39\python.exe
 ```
 - tensorflow를 설치할 때 Fatal 오류가 나는 경우는 자동으로 구동되는 환경변수의 path 설정에 오류가 있기 때문이다. pip를 다시 설치하는 아래 조치를 통해 해결할 수 있다. 
 ```
-python -m pip uninstall pip
-easy_install.exe pip
+where python
 ```
+위 명령어를 통해 python을 실행파일 위치를 파악하고 환경변수를 수정하면 해결이 가능하나, 이후 실행하는 pip 명령어를 아래와 같은 형태로 수정하여 실행하면 일단은 실행 가능함
 
+```
+python -m pip install **********
+```
 
 텐서플로우 msvcp140.dll오류시 참고 사이트 [링크](https://blog.naver.com/complusblog/221177145686), [마이크로소프트사 설치링크](https://www.microsoft.com/ko-kr/download/details.aspx?id=48145)  
 
