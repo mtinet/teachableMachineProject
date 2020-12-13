@@ -16,6 +16,11 @@
 - 아두이노 파일(dataReceiveTest.ino)은 2개의 서보모터를 사용하여 'a'가 들어오면 paper를, 'b'가 들어오면 scissors를, 'c'가 들어오면 rock을 내도록 프로그래밍되어 있음 
 
 #### 2. 프로젝트 깃허브 레파지토리 다운로드  
+- github 레파지토리에서 다운로드  
+![](https://github.com/mtinet/teachableMachineProject/blob/master/image/download1.png?raw=true)  
+![](https://github.com/mtinet/teachableMachineProject/blob/master/image/download2.png?raw=true)  
+
+- cmd를 이용한 다운로드(압축을 풀 필요가 없음)  
 ```
 git clone https://github.com/mtinet/teachableMachineProject.git
 ```
