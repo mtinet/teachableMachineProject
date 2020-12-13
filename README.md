@@ -38,7 +38,13 @@ where python
 위 명령어를 통해 python을 실행파일 위치를 파악하고 환경변수를 수정하면 해결이 가능하나, 이후 실행하는 pip 명령어를 아래와 같은 형태로 수정하여 실행하면 일단은 실행 가능함
 
 ```
+pip install *********
+
+대신에 
+
 python -m pip install **********
+
+를 사용
 ```
 
 텐서플로우 msvcp140.dll오류시 참고 사이트 [링크](https://blog.naver.com/complusblog/221177145686), [마이크로소프트사 설치링크](https://www.microsoft.com/ko-kr/download/details.aspx?id=48145)  
