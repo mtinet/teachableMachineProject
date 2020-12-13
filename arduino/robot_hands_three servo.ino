@@ -1,3 +1,5 @@
+// 아두이노 우노 보드의 하드웨어 시리얼 포트(0, 1)를 사용합니다. 
+
 #include <Servo.h>
 
 Servo finger1;  
