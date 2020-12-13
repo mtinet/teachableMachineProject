@@ -14,18 +14,19 @@
 - 아두이노 파일(dataReceiveTest.ino)은 'a'가 들어오면 13번핀을, 'b'가 들어오면 12번핀을, 'c'가 들어오면 11번핀을 제어하도록 프로그래밍되어 있음  
 - 아두이노 파일(robot_hands_three servo.ino)은 3개의 서보모터를 사용하여 'a'가 들어오면 rock을, 'b'가 들어오면 paper를, 'c'가 들어오면 scissors를 내도록 프로그래밍되어 있음  
 - 아두이노 파일(dataReceiveTest.ino)은 2개의 서보모터를 사용하여 'a'가 들어오면 paper를, 'b'가 들어오면 scissors를, 'c'가 들어오면 rock을 내도록 프로그래밍되어 있음 
-- 프로젝트 깃허브 레파지토리 다운로드  
+
+#### 2. 프로젝트 깃허브 레파지토리 다운로드  
 ```
 git clone https://github.com/mtinet/teachableMachineProject.git
 ```
 
-#### 2. python 설치  
+#### 3. python 설치  
 - tensorflow는 아직 python 3.8.6까지만 지원을 하므로, 파이썬을 3.9버전이 설치되어 있을 경우 3.8.6 이하 버전으로 재설치해야 함  
 - python.org사이트 Download-Windows에서 Python 3.8.6 - Sept. 24, 2020 카테고리 안에 있는 Download Windows x86-64 executable installer를 다운로드 받아 설치함, [링크](https://www.python.org/downloads/windows/)  
 - python 설치할 때는 Add python 3.8 to PATH를 반드시 체크하고 설치를 진행하세요  
 ![](https://github.com/mtinet/teachableMachineProject/blob/master/image/python.png?raw=true)  
 
-#### 3. cmd창을 열고 프로젝트 폴더로 이동  
+#### 4. cmd창을 열고 프로젝트 폴더로 이동  
 - 다운로드 한 폴더를 열고 주소를 복사함
 ![](https://github.com/mtinet/teachableMachineProject/blob/master/image/location1.png?raw=true)  
 - 윈도우의 돋보기에서 cmd 를 실행함  
@@ -40,7 +41,7 @@ cd "다운로드 한 폴더 위치"
 python teachableMachineByVideo
 ```
 
-#### 4. 라이브러리 설치  
+#### 5. 라이브러리 설치  
 - tensorflow 설치
 ```{.python} 
 pip install tensorflow
@@ -64,17 +65,17 @@ pip install opencv-contrib-python
 ```
 - 그 외 오류는 오류나는 부분을 카피해서 구글에 물어보면 해답을 얻을 수 있음  
  
-#### 5. 파일 구동은 아래 명령어로 하면 됨, 프로그램 정지는 'q'버튼  
+#### 6. 파일 구동은 아래 명령어로 하면 됨, 프로그램 정지는 'q'버튼  
 ```{.python}  
 $python teachableMachineByVideo.py  
 ```  
 
-#### 6. 결과 이미지  
+#### 7. 결과 이미지  
 주의사항 : 가위바위보와 결과 속의 얼굴은 서로 무관하고, 학습시킬 때 나눈 클래스의 총 합계 퍼센트가 늘 100%가 나오는 것임, 어떤 화면이 입력되건 총 합계는 100%라는 말. 학습을 잘 시키는 것도 중요하고, 디폴트값을 넣어주는 것도 중요하다는 사실을 알 수 있음  
 ![](https://github.com/mtinet/teachableMachineProject/blob/master/image/scissors.png?raw=true)  
 
 
-#### 7. 그 외 파일들의 기능은 다음과 같다.  
+#### 8. 그 외 파일들의 기능은 다음과 같다.  
 - keras_model.h5 : teachable machine 홈페이지에서 Export한 모델파일, 이 파일이 머신러닝 학습의 결과이며, 이 파일을 이용해 학습된 내용을 활용함, 현재는 파란색, 흰색, 초록색을 구분하는 모델파일이 올라가 있음. 티처블 머신으로 자신이 학습시키고자 하는 이미지를 학습시키면 됨  
 - labels.txt : 모델을 만들 때 레이블을 몇개로 해 학습을 시켰느냐에 따라 label이 나뉨, label 이름을 자신이 원하는 것으로 수정해 학습시키면 추후 모델로 추론을 할 때 그 label이 표시됨, 물론 나중에 다운로드 받은 labels.txt 파일을 직접 수정해도 무관함  
 - teachableMachineByVideo.py : 학습된 모델 파일로 웹캠에서 입력되는 영상을 분석하여 추론해주는 파이썬 파일, 이 파일이 이 프로젝트의 핵심, 추후 라즈베리파이에 탑재해서 로봇을 제어하는데 사용할 예정  
