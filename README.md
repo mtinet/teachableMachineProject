@@ -71,8 +71,12 @@ $python teachableMachineByVideo.py
 ```  
 
 #### 7. 결과 이미지  
-주의사항 : 가위바위보와 결과 속의 얼굴은 서로 무관하고, 학습시킬 때 나눈 클래스의 총 합계 퍼센트가 늘 100%가 나오는 것임, 어떤 화면이 입력되건 총 합계는 100%라는 말. 학습을 잘 시키는 것도 중요하고, 디폴트값을 넣어주는 것도 중요하다는 사실을 알 수 있음  
+- teachable machine에서 class를 입력하지 않을경우 자동 생성된 class이름으로 나옴  
 ![](https://github.com/mtinet/teachableMachineProject/blob/master/image/scissors.png?raw=true)  
+
+- 가위바위보가 잘 학습되었을 경우 아래와 같은 화면이 나오면서 serial통신을 통해 a, b, c의 문자를 송신하게 됨  
+![](https://github.com/mtinet/teachableMachineProject/blob/master/image/scissors.png?raw=true)  
+주의사항 : 가위바위보와 결과 속의 얼굴은 서로 무관하고, 학습시킬 때 나눈 클래스의 총 합계 퍼센트가 늘 100%가 나오는 것임, 어떤 화면이 입력되건 총 합계는 100%라는 말. 학습을 잘 시키는 것도 중요하고, 디폴트값을 넣어주는 것도 중요하다는 사실을 알 수 있음  
 
 
 #### 8. 그 외 파일들의 기능은 다음과 같다.  
