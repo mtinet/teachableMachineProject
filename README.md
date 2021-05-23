@@ -28,8 +28,8 @@ git clone https://github.com/mtinet/teachableMachineProject.git
 ```
 
 #### 3. python 설치  
-- tensorflow는 아직 python 3.8.6까지만 지원을 하므로, 파이썬을 3.9버전이 설치되어 있을 경우 3.8.6 이하 버전으로 재설치해야 함  
-- python.org사이트 Download-Windows에서 Python 3.8.6 - Sept. 24, 2020 카테고리 안에 있는 Download Windows x86-64 executable installer를 다운로드 받아 설치함, [링크](https://www.python.org/downloads/windows/)  
+- tensorflow는 아직 python 3.8.X까지만 지원을 하므로, 파이썬을 3.9버전이 설치되어 있을 경우 3.8.X이하 버전으로 재설치해야 함  
+- python.org사이트 Download-Windows에서 Python 3.8.X- Sept. 24, 2020 카테고리 안에 있는 Download Windows x86-64 executable installer를 다운로드 받아 설치함, [링크](https://www.python.org/downloads/windows/)  
 - python 설치할 때는 Add python 3.8 to PATH를 반드시 체크하고 설치를 진행하세요  
 ![](https://github.com/mtinet/teachableMachineProject/blob/master/image/python.png?raw=true)  
 
