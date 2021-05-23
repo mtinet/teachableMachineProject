@@ -45,7 +45,7 @@ cd "다운로드 한 폴더 위치"
 ![](https://github.com/mtinet/teachableMachineProject/blob/master/image/location2.png?raw=true)  
 - 아래 명령어를 실행하면서 발생하는 오류를 확인하고 해당하는 라이브러리를 설치함
 ```
-python teachableMachineByVideo
+python teachableMachineByVideo.py
 ```
 
 #### 5. 라이브러리 설치  
