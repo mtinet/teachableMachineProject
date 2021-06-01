@@ -17,15 +17,43 @@ import numpy as np
 import cv2
 import serial
 import time
+import serial.tools.list_ports
 
-# 시리얼 통신 설정
-# 파이썬의 시리얼 통신 라이브러리를 이용해 시리얼 통신을 연결하고 이를 사용할 때 ser로 사용할 수 있도록 변수를 지정함
-ser = serial.Serial(
-    # 아래는 윈도우에서의 시리얼 포트 설정방법임, 포트번호는 사용자의 아두이노나 마이크로비트가 연결된 포트번호로 수정해줘야 함
-    port='COM5',
-    # 통신속도는 9600bps, 이게 디폴트임.
-    baudrate=9600,
-)
+ports = serial.tools.list_ports.comports()
+com = ''
+
+# 시리얼 통신 수동 설정
+# # 파이썬의 시리얼 통신 라이브러리를 이용해 시리얼 통신을 연결하고 이를 사용할 때 ser로 사용할 수 있도록 변수를 지정함
+# ser = serial.Serial(
+#     # 아래는 윈도우에서의 시리얼 포트 설정방법임, 포트번호는 사용자의 아두이노나 마이크로비트가 연결된 포트번호로 수정해줘야 함
+#     port='COM5',
+#     # 통신속도는 9600bps, 이게 디폴트임.
+#     baudrate=9600,
+# )
+
+# # 마이크로비트 연결 com 포트 찾아서 자동으로 연결하기
+# for port, desc, hwid in sorted(ports):
+#     if 'USB' in desc:
+#         com = port
+# if com != '':
+#     print('\n microbit USB detected: ', com)
+# else:
+#     print('\nPlease connect your microbit to this PC via USB')
+
+# ser = serial.Serial(com, 115200, timeout=0, parity=serial.PARITY_NONE, rtscts=0)
+
+
+# 아두이노 연결 com 포트 찾아서 자동으로 연결하기
+for port, desc, hwid in sorted(ports):
+    if 'Arduino' in desc:
+        com = port
+if com != '':
+    print('\n arduino USB detected: ', com)
+else:
+    print('\nPlease connect your microbit to this PC via USB')
+    
+ser = serial.Serial(com, 9600, timeout=0)
+
 
 #레이블 가져오기
 labels=[]
