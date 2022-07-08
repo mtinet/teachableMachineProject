@@ -53,6 +53,10 @@ python teachableMachineByVideo.py
 ```{.python} 
 pip install tensorflow
 ```
+- termcolor 설치
+```{.python} 
+pip install termcolor
+```
 - PIL 설치  
 ```{.python} 
 pip install pillow 
